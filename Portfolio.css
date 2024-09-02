@@ -1,0 +1,254 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('bg.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg.jpg') no-repeat center center fixed; /* Fixed background image */
+    background-size: cover;
+    z-index: -1; /* Place it behind other content */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background for better text visibility */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+header .logo {
+    width: 100px; /* Adjust this value to resize the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Main content styles */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Hero section */
+.photo-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* About Me section */
+.about-me-section {
+    background-color: #f9f9f9;
+}
+
+.about-me-section h2 {
+    font-size: 1.5rem;
+}
+
+/* Works section */
+.works-section {
+    background-color: #f2f2f2;
+}
+
+.work-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Resume section */
+.resume-section {
+    background-color: #e9ecef;
+}
+
+.resume-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Resume details side-by-side */
+.resume-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+}
+
+.academic-info,
+.positions-responsibilities {
+    flex: 1; /* Ensure both sections take up equal space */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for spacing inside the box */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    text-align: left; /* Align text to the left for readability */
+}
+
+.academic-info h3,
+.positions-responsibilities h3 {
+    margin-top: 0;
+    font-size: 1.25rem; /* Slightly larger font size for headings */
+    font-weight: bold; /* Make heading bold */
+}
+
+/* Skills container */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.technical-skills,
+.soft-skills {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for spacing inside the box */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    text-align: left; /* Align text to the left for readability */
+}
+
+.skills-container h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.technical-skills p,
+.soft-skills p {
+    font-weight: bold; /* Make skill text bold */
+    margin: 5px 0;
+}
+
+/* Contact section */
+.contact {
+    background-color: #f9f9f9;
+}
+
+.contact p {
+    font-size: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .resume-details,
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
